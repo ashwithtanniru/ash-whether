@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>India Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="weather-container">
+    <h1>India Weather App</h1>
+
+    <div class="input-section">
+      <select id="stateSelect" onchange="loadDistricts()">
+        <option value="">Select State</option>
+      </select>
+
+      <select id="districtSelect" onchange="getWeather()">
+        <option value="">Select District</option>
+      </select>
+    </div>
+
+    <div id="weatherResult" class="weather-result hidden">
+      <h2 id="cityName"></h2>
+      <p id="dateTime"></p>
+      <img id="weatherIcon" alt="Weather Icon" />
+      <p id="temperature"></p>
+      <p id="description"></p>
+      <p id="humidity"></p>
+      <p id="windSpeed"></p>
+      <p id="pressure"></p>
+    </div>
+  </div>
+
+  <script src="districts.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
